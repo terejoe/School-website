@@ -1,0 +1,820 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x:hidden;
+}
+
+.headnav{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url("img/banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header{
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 15px;
+}
+
+.logo{
+  cursor: pointer;
+  margin-right: auto;
+  width: 250px;
+  height: 80px;
+  margin-left: 10px;
+}
+
+/*Navbar*/
+.navbar{
+  margin-right: 100px;
+}
+
+.navlist li{
+  display: inline-block;
+  padding: 15px;
+}
+
+.navlist li a{
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Helvetica';
+  font-size: 13px;
+}
+
+.navlist li a::after{
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.3s ease;
+}
+
+.navlist li a:hover::after{
+  width:100%;
+  
+}
+
+i.fa{
+  display: none;
+}
+
+/*Main Content*/
+.main{
+  margin-top: 12%;
+  text-align: center;
+  position: relative;
+}
+
+.main h1{
+  font-size: 48px ;
+  font-family: arial ;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height:4px;
+  margin-bottom: 50px;
+}
+
+.main p{
+  color: #fff;
+  letter-spacing: 1px;
+  font-weight: lighter;
+  margin-bottom: 30px;
+}
+
+a.btn{
+  text-decoration: none ;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 11px 15px;
+  display: inline-block;
+  cursor: pointer;
+  background: transparent;
+}
+
+a.btn:hover{
+  border: 1px solid #f44336;
+  transition: 1s;
+  background: #f44336;
+
+}
+
+/*Courses We Offer*/
+.section-one{
+  text-align: center;
+  margin-top: 60px;
+}
+
+.section-one h2,h3{
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.section-one p{
+  font-weight: 300;
+  color: #7a7575;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.category-one{
+  display: flex;
+  margin-top: 30px;
+  flex-direction: row;
+  text-align: center;
+  justify-items: center;
+  margin-left: 40px;
+}
+
+.cwo{
+  background: #fce9e9;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin:0 40px;
+  padding: 15px ;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.cwo:hover{
+  transform: scale(1.1);
+  box-shadow: 2px 2px 2px #888484;
+  z-index: 2;
+}
+
+/*Our Global Campus*/
+.category-two{
+  display: flex;
+  margin-top: 30px;
+  flex-direction: row;
+  text-align: center;
+  justify-items: center;
+  margin-left: 60px;
+}
+
+.campuses{
+  box-sizing: border-box;
+  margin:0 5px;
+  cursor: pointer;
+  position: relative;
+  padding-right: 5px;
+}
+
+.campuses img{
+  height: 500px;
+  width: 400px;
+}
+/* Make the image to responsive */
+.image{
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* The overlay effect (full height and width) - lays on top of the container and over the image */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f44336;
+  opacity: 0.8;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  transform: scale(0);
+  transition: .3s ease;
+  border-radius: 8px;
+}
+
+/* When you mouse over the container, the overlay text will "zoom" in display */
+.campuses:hover .overlay {
+  transform: scale(1);
+}
+
+/* Some text inside the overlay, which is positioned in the middle vertically and horizontally */
+.text{
+  color: #000;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/*Our Facilities*/
+.category-three{
+  display: flex;
+  margin-top: 30px;
+  flex-direction: row;
+}
+
+.facility img{
+  width: 400px;
+  height: 300px;
+  border-radius: 8px;
+}
+.context p{
+  text-align: left;
+  font-size: 18px;
+  margin-left: 23px;
+}
+
+.context h2{
+  text-align: left;
+  font-size: 20px;
+  margin-left: 30px;
+}
+
+.writeup{
+  margin-top: 10px;
+}
+
+
+/*What Our Student Says Section*/
+.category-four{
+  display: flex;
+  margin-top: 30px;
+  flex-direction: row;
+  text-align: left;
+  justify-items: center;
+  margin-left: 40px;
+}
+
+.student{
+  background: #fce9e9;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin:0 40px;
+  padding: 15px;
+  display: flex;
+}
+
+.student img{
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.name h3{
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+
+/* Styling Rating Icons*/
+i.fa-solid{
+  color: #f44336;
+  font-size: 15px;
+  margin-top: 12px;
+}
+
+i.fa-regular{
+  color: #f44336;
+  font-size: 15px;
+  margin-top: 12px;
+}
+
+div.stars{
+  margin-left: 15px;
+}
+
+/*Enroll For Online Courses*/
+.cta{
+  background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(img/banner2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 280px;
+  width: 90%;
+  margin-top: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+}
+
+.main-one{
+  padding-top: 4%;
+  text-align: center;
+  position: relative;
+}
+
+
+.main-one h2{
+  font-size: 30px ;
+  font-family: arial ;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+a.btn-one{
+  text-decoration: none ;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 11px 15px;
+  display: inline-block;
+  cursor: pointer;
+  background: transparent;
+  margin-top: 20px;
+}
+
+a.btn-one:hover{
+  border: 1px solid #f44336;
+  transition: 1s;
+  background: #f44336;
+
+}
+
+/*Footer*/
+.footer{
+  text-align: center;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.footer p{
+  margin-top: 20px;
+  color: #7a7575;
+}
+i.fa-brands{
+  color: #f44336;
+  font-size: 15px;
+  margin-top: 12px;
+  margin-right: 18px;
+}
+
+.end{
+  margin-bottom: 30px;
+}
+
+
+
+
+/* Second Page*/
+.headnav-two{
+  background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url("img/background.jpg");
+  min-height: 60vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-main{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 40px;
+  padding: 5%;
+}
+
+.context h1{
+  margin: auto;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.context p{
+  color: #7a7575;
+  text-align: left;
+  margin-left: -0.5px;
+}
+
+.about-main img{
+  width: 600px;
+  height: 350px;
+  margin-left: 10px;
+}
+
+.btn-two{
+  border: 1px solid #f44336;
+  padding: 11px 15px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 20px;
+  background: transparent;
+}
+
+.btn-two a{
+  color: #f44336;
+  text-decoration: none ;
+}
+
+.btn-two:hover{
+  transition: 0.2s;
+  background: #f44336;
+}
+
+.btn-two a:hover{
+  color: #fff;
+}
+
+/*Fourth Page*/
+.online{
+  padding: 5%;
+  display: flex;
+  flex-direction: row;
+}
+
+.online img{
+  width: 700px;
+  margin-right: 50px;
+  height: 460px;
+}
+
+table{
+  height: 320px;
+}
+.table-head{
+  border: 1px solid #f44336;
+  background: #f44336;
+  width: 350px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.table-data{
+  width: 400px;
+}
+
+.cert{
+  padding: 0 5%;
+  text-align: left;
+  width: 70%;
+}
+
+.cert p{
+  margin-bottom: 13px;
+  color: #7a7575;
+}
+
+.cert h2{
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.form{
+  padding: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-box{
+  border: 1px solid #b1afafb3;
+  padding: 2%;
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-three{
+  border: 1px solid #f44336;
+  padding: 11px 15px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 20px;
+  background: transparent;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-three a{
+  color: #f44336;
+  text-decoration: none;
+}
+
+.btn-three:hover{
+  transition: 0.2s;
+  background: #f44336;
+}
+
+.btn-three a:hover{
+  color: #fff;
+}
+
+.modal-box h2{
+  margin-bottom: 10px;
+}
+
+.modal-form input{
+  margin-bottom: 20px;
+  padding: 10px;
+  background:linear-gradient(#fdfdfdb3, #fbfbfcb3), #cec7c7;
+  border: #d3cece;
+}
+
+input.comment{
+  padding: 15%;
+  position: relative;
+}
+
+input.comment::placeholder{
+  text-align: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px;
+}
+
+/*Fifth Page*/
+.map{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5%;
+}
+
+
+/*his Technical Part*/
+.info{
+  margin-right: 250px;
+}
+.contact{
+  display: flex;
+  flex-direction: row;
+  padding: 5% 10%;
+}
+
+.msg-form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.msg-form input{
+  padding: 2%;
+  width: 530px;
+  margin-bottom: 10px;
+}
+
+input.message{
+  padding: 15%;
+  position: relative;
+}
+
+input.message::placeholder{
+  text-align: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px;
+}
+
+.light{
+  color: #494646;
+  font-size: 15px;
+}
+
+
+/*Media Queries*/
+@media(max-width:1200px){
+  .main h1{
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 50px;
+    display: inline;
+    justify-content: space-around;
+  }
+
+  .category-two{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    justify-items: center;
+    margin-left: 0px;
+  }
+
+  .image{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .category-three{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+
+  .facility img{
+    width: 350px;
+    height: 250px;
+    border-radius: 8px;
+  }
+
+  .modal-box{
+    width: 90%;
+  }
+
+  .online{
+    display: flex;
+    flex-direction: row;
+    padding: 3%;
+  }
+
+  table{
+    margin-top: 20px;
+  }
+
+  .cert{
+    text-align: left;
+    width: 95%;
+    margin-bottom: 5px;
+  }
+
+  .online img{
+    width: 450px;
+    height: auto;
+  }
+
+  iframe{
+    margin:0;
+    padding: 0;
+    width:730px;
+    height: 400px;
+  }
+
+  .info{
+    margin-bottom: 25px;
+    margin-right: 100px ;
+  }
+  .contact{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .msg-form input{
+    width: 430px;
+  }
+   
+}
+
+
+@media(max-width:768px) {
+  .header{
+    overflow-x:hidden;
+  }
+  .logo{
+    width: 200px;
+    height: 60px;
+  }
+  
+  .main h1{
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 50px;
+    display: inline;
+    justify-content: space-around;
+  }
+
+  .main p{
+    width: 95%;
+    padding: 10px;
+  }
+
+  .navlist{
+    position: absolute;
+    background: #f44336;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right:-200px;
+    text-align: left;
+    z-index: 2;
+    transition: 0.2s ease-in;
+  }
+
+  i.fa{
+    display: block;
+    color: #fff;
+    margin: 12px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  ul.navlist{
+    padding: 30px;
+  }
+
+  .category-one{
+    display: grid;
+    grid-template-columns: 1.5fr;
+  }
+
+  .cwo{
+    margin-bottom: 20px;
+  }
+
+  .category-two{
+    display: grid;
+    grid-template-columns: 2fr;
+    justify-items: center;
+    margin-left: 0px;
+  }
+
+  .campuses{
+    margin-bottom: 10px;
+  }
+
+  .category-three{
+    display: grid;
+    grid-template-columns: 2fr;
+    justify-items: center;
+  }
+
+  .context p{
+    margin-left: 40px;
+  }
+  
+  .context h2{
+    margin-left: 45px;
+  }
+
+  .category-four{
+    display: grid;
+    grid-template-columns: 2fr;
+    justify-items: center;
+  }
+  
+  .student{
+    margin-bottom: 10px;
+  }
+  
+  /*Second Page*/
+  .about-main{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .context{
+    text-align: center;
+  }
+
+  .btn-two{
+    margin-bottom: 10px;
+  }
+
+  /*Third Page*/ 
+  .modal-box{
+    width: 90%;
+  }
+
+  .btn-three{
+    margin-left: 5px;
+  }
+
+  .online{
+    display: flex;
+    flex-direction: column;
+    padding: 4%;
+  }
+
+  table{
+    margin-top: 20px;
+  }
+
+  .cert{
+    text-align: left;
+    width: 95%;
+    margin-bottom: 5px;
+  }
+
+  .online img{
+    width: 450px;
+    height: auto;
+  }
+  
+  /*Fifth Page*/
+  iframe{
+    margin:0;
+    padding: 0;
+    width:450px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .info{
+    margin-bottom: 20px;
+  }
+  .contact{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .msg-form input{
+    width: 430px;
+  }
+}

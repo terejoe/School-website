@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>University Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css">
+        <link rel = "stylesheet" href=" styles.css">
+    </head>
+
+    <body>
+        <header class = "headnav-two">
+            <div class = "header">
+                <a href = "index.html" class = "logo"><img src = "img/logo.png" alt = "Logo Image" class = "logo"></a>
+            
+                <nav class = "navbar" id = "toggle">
+                    <ul class = "navlist" id = "navlist">
+                        <i class="fa fa-times"class="icon" onclick="myFunction()"></i>
+                        <li><a href = "index.html">HOME</a></li>
+                        <li><a href = "about.html">ABOUT</a></li>
+                        <li><a href = "course.html">COURSE</a></li>
+                        <li><a href = "blog.html">BLOG</a></li>
+                        <li><a href = "#">CONTACT</a></li>
+                    </ul>
+                </nav>
+                <i class="fa fa-bars" class="icon" onclick="myFunction()"></i>
+           </div>
+
+            <section class = "main">
+                <h1>Contact Us</h1>
+            </section>
+        </header>
+
+        <section class = "map">
+            <div class="mapouter">
+                <div class="gmap-canvas">
+                    <iframe width="1000px" height="400" id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+
+                    <style>.gmap_canvas {overflow:hidden;background:none!important;height:400px;width:500px;}</style>
+                </div>
+            </div>
+        </section>
+
+        <section class = "contact">
+            <div class = "info">
+                <div class >
+                    <i class="fa-solid fa-house-chimney"></i>
+                    <div>
+                        <p>Xyz Road, Abc Building</p>
+                        <p class = "light">Bangalore, Karnataka, IN</p>
+                    </div>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <p>+1 0123456789</p>
+                        <p class = "light">Monday to Saturday 10 Am to 6 Pm</p>
+                    </div>
+                </div>
+
+                <div>
+                    <i class="fa-regular fa-envelope"></i>
+                    <div>
+                        <p>info@easytutorialspro.com</p>
+                        <p class = "light">Email us your query</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class = "msg">
+                <div class = "msg-box">
+                    <div class = "msg-form">
+                        <input type = "name" id = "name" placeholder="Enter your name">
+                        <input type = "email" id = "email" placeholder="Enter email address">
+                        <input type = "text" id = "text" placeholder="Enter your subject">
+                        <input type = "text" id = "text" placeholder="Message" class = "message">
+                    </div>
+                    <button class = "btn-three"><a href = "#">Send Message</a></button>
+                </div>
+            </div>
+        </section>
+
+        <footer class = "footer">
+            <h3>About Us</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pellentesque aliquet turpis nulla, eleifend faucibus est<br> sollicitudinut. Maecenas ut venenatis ex et dapibus purus.</p>
+            <div class = "icons">
+                <a href = "wwww.facebook.com"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href = "wwww.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                <a href = "wwww.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                <a href = "wwww.linkedin.com"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <p class= "end"> made with <i class="fa-regular fa-heart"></i> by Easy Tutorials</p>
+        </footer>
+
+        <script src = "scripts.js"></script>
+    </body>
+</html>
